@@ -9,7 +9,8 @@ public class Main {
         System.out.println("Please select program from following:");
         System.out.println("1.Calculate % of heads and tails\n" +
                 "2.Leap year checker\n" +
-                "3.Power of 2");
+                "3.Power of 2\n" +
+                "4.Harmonic Numbers");
 
         int option = sc.nextInt();
         switch(option){
@@ -21,6 +22,9 @@ public class Main {
                 break;
             case 3:
                 Main.powerOf2();
+                break;
+            case 4:
+                Main.harmonicNumberPrinter();
                 break;
         }
     }
@@ -65,5 +69,15 @@ public class Main {
         } else {
             System.out.println("Input is out of range. Please enter a value between 0 and 30.");
         }
+    }
+    public static void harmonicNumberPrinter(){
+        System.out.println("Please enter number up to which wants to check harmonic number:");
+        int number = sc.nextInt();
+        double harmonicNum = 0;
+        for (int i =  1; i<=number; i++){
+
+            harmonicNum = harmonicNum+(double)1/i;
+        }
+        System.out.println(harmonicNum);
     }
 }
