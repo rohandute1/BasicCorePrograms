@@ -10,7 +10,8 @@ public class Main {
         System.out.println("1.Calculate % of heads and tails\n" +
                 "2.Leap year checker\n" +
                 "3.Power of 2\n" +
-                "4.Harmonic Numbers");
+                "4.Harmonic Numbers\n" +
+                "5.Prime factorization");
 
         int option = sc.nextInt();
         switch(option){
@@ -25,6 +26,9 @@ public class Main {
                 break;
             case 4:
                 Main.harmonicNumberPrinter();
+                break;
+            case 5:
+                Main.primeFactorization();
                 break;
         }
     }
@@ -79,5 +83,26 @@ public class Main {
             harmonicNum = harmonicNum+(double)1/i;
         }
         System.out.println(harmonicNum);
+    }
+    public static void primeFactorization(){
+        System.out.print("Enter a number to find its prime factors: ");
+        int N = sc.nextInt();
+        System.out.print("Prime factors of " + N + " are: ");
+        while (N % 2 == 0) {
+            System.out.print(2 + " ");
+            N = N / 2;
+        }
+
+        for (int i = 3; i * i <= N; i += 2) {
+            while (N % i == 0) {
+                System.out.print(i + " ");
+                N = N / i;
+            }
+        }
+
+        if (N > 2) {
+            System.out.print(N);
+        }
+
     }
 }
