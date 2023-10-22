@@ -15,7 +15,8 @@ public class Main {
                 "6.Compute Quotient and Remainder\n" +
                 "7.Program to Swap Two Numbers\n" +
                 "8.Program to check number is even or odd\n" +
-                "9.Program to Check Whether an Alphabet is Vowel or Consonant");
+                "9.Program to Check Whether an Alphabet is Vowel or Consonant\n" +
+                "10.Program to Find the Largest Among Three Numbers");
 
         int option = sc.nextInt();
         switch(option){
@@ -45,6 +46,9 @@ public class Main {
                 break;
             case 9:
                 vowelOrConsonantChecker();
+                break;
+            case 10:
+                largestAmongThree();
                 break;
 
         }
@@ -182,5 +186,26 @@ public class Main {
                     break;
             }
         }
+    }
+    public static void largestAmongThree(){
+
+        System.out.print("Enter the first number: ");
+        double firstNumber = sc.nextDouble();
+        System.out.print("Enter the second number: ");
+        double secondNumber = sc.nextDouble();
+        System.out.print("Enter the third number: ");
+        double thirdNumber = sc.nextDouble();
+
+        double largest = firstNumber;
+
+        if (secondNumber > largest) {
+            largest = secondNumber;
+        }
+
+        if (thirdNumber > largest) {
+            largest = thirdNumber;
+        }
+
+        System.out.println("The largest number is: " + largest);
     }
 }
