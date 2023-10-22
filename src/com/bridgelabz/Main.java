@@ -12,7 +12,8 @@ public class Main {
                 "3.Power of 2\n" +
                 "4.Harmonic Numbers\n" +
                 "5.Prime factorization\n" +
-                "6.Compute Quotient and Remainder");
+                "6.Compute Quotient and Remainder\n" +
+                "7.Program to Swap Two Numbers");
 
         int option = sc.nextInt();
         switch(option){
@@ -33,6 +34,9 @@ public class Main {
                 break;
             case 6:
                 QuotientAndRemainderCalculator();
+                break;
+            case 7:
+                numberSwapper();
                 break;
         }
     }
@@ -123,5 +127,25 @@ public class Main {
         System.out.println("Quotient: " + quotient);
         System.out.println("Remainder: " + remainder);
 
+    }
+    public static void numberSwapper(){
+
+        System.out.print("Enter the first number: ");
+        int firstNumber = sc.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int secondNumber = sc.nextInt();
+
+        System.out.println("Original values: ");
+        System.out.println("First number: " + firstNumber);
+        System.out.println("Second number: " + secondNumber);
+
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        System.out.println("Swapped values: ");
+        System.out.println("First number: " + firstNumber);
+        System.out.println("Second number: " + secondNumber);
     }
 }
