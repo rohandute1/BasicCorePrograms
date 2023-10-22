@@ -11,24 +11,28 @@ public class Main {
                 "2.Leap year checker\n" +
                 "3.Power of 2\n" +
                 "4.Harmonic Numbers\n" +
-                "5.Prime factorization");
+                "5.Prime factorization\n" +
+                "6.Compute Quotient and Remainder");
 
         int option = sc.nextInt();
         switch(option){
             case 1:
-                Main.coinFlipper();
+                coinFlipper();
                 break;
             case 2:
-                Main.leapYearChecker();
+                leapYearChecker();
                 break;
             case 3:
-                Main.powerOf2();
+                powerOf2();
                 break;
             case 4:
-                Main.harmonicNumberPrinter();
+                harmonicNumberPrinter();
                 break;
             case 5:
-                Main.primeFactorization();
+                primeFactorization();
+                break;
+            case 6:
+                QuotientAndRemainderCalculator();
                 break;
         }
     }
@@ -103,6 +107,21 @@ public class Main {
         if (N > 2) {
             System.out.print(N);
         }
+    }
+    public static void QuotientAndRemainderCalculator(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the dividend: ");
+        int dividend = scanner.nextInt();
+
+        System.out.print("Enter the divisor: ");
+        int divisor = scanner.nextInt();
+
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("Quotient: " + quotient);
+        System.out.println("Remainder: " + remainder);
 
     }
 }
