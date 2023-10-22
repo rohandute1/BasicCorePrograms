@@ -14,7 +14,8 @@ public class Main {
                 "5.Prime factorization\n" +
                 "6.Compute Quotient and Remainder\n" +
                 "7.Program to Swap Two Numbers\n" +
-                "8.Program to check number is even or odd");
+                "8.Program to check number is even or odd\n" +
+                "9.Program to Check Whether an Alphabet is Vowel or Consonant");
 
         int option = sc.nextInt();
         switch(option){
@@ -41,6 +42,9 @@ public class Main {
                 break;
             case 8:
                 evenOddChecker();
+                break;
+            case 9:
+                vowelOrConsonantChecker();
                 break;
 
         }
@@ -164,5 +168,19 @@ public class Main {
             System.out.println(number + " is odd.");
         }
     }
-
+    public static void vowelOrConsonantChecker(){
+        System.out.println("Please enter any character to check vowel or consonant:");
+        char ch = sc.next().charAt(0);
+        ch = Character.toLowerCase(ch);
+        if (ch >= 'a' && ch<='z'){
+            switch(ch) {
+                case 'a', 'e', 'i', 'o', 'u':
+                    System.out.println("Entered character is a vowel.");
+                    break;
+                default:
+                    System.out.println("Consonant");
+                    break;
+            }
+        }
+    }
 }
