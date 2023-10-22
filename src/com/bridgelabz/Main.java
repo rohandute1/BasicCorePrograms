@@ -8,7 +8,8 @@ public class Main {
         System.out.println("Welcome to Basic Core Programs.");
         System.out.println("Please select program from following:");
         System.out.println("1.Calculate % of heads and tails\n" +
-                "2.Leap year checker\n");
+                "2.Leap year checker\n" +
+                "3.Power of 2");
 
         int option = sc.nextInt();
         switch(option){
@@ -17,6 +18,9 @@ public class Main {
                 break;
             case 2:
                 Main.leapYearChecker();
+                break;
+            case 3:
+                Main.powerOf2();
                 break;
         }
     }
@@ -47,5 +51,19 @@ public class Main {
             System.out.println("Year entered is not a leap year");
         }
     }
+    public static void powerOf2(){
+        System.out.println("Enter a value for N (0 <= N < 31):");
+        int N = sc.nextInt();
+        sc.close();
 
+        if (N >= 0 && N < 31) {
+            int powerOf2 = 1;
+            for (int i = 0; i <= N; i++) {
+                System.out.println("2^" + i + " = " + powerOf2);
+                powerOf2 *= 2;
+            }
+        } else {
+            System.out.println("Input is out of range. Please enter a value between 0 and 30.");
+        }
+    }
 }
