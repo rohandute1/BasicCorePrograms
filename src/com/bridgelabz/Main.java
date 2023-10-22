@@ -7,14 +7,17 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Basic Core Programs.");
         System.out.println("Please select program from following:");
-        System.out.println("1.Calculate % of heads and tails");
+        System.out.println("1.Calculate % of heads and tails\n" +
+                "2.Leap year checker\n");
 
         int option = sc.nextInt();
         switch(option){
             case 1:
                 Main.coinFlipper();
                 break;
-
+            case 2:
+                Main.leapYearChecker();
+                break;
         }
     }
     public static void coinFlipper(){
@@ -34,6 +37,15 @@ public class Main {
 
         System.out.println("Percentage of heads : " + percentageOfHeads);
         System.out.println("Percentage of tails : " + percentageOfTails);
+    }
+    public static void leapYearChecker(){
+        System.out.println("Please enter any year you want to check.");
+        int year = sc.nextInt();
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+            System.out.println("Year entered is a leap year");
+        }else{
+            System.out.println("Year entered is not a leap year");
+        }
     }
 
 }
