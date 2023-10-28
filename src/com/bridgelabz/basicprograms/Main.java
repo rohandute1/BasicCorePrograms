@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.basicprograms;
 
 import java.util.Scanner;
 
@@ -7,12 +7,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Basic Core Programs.");
         System.out.println("Please select program from following:");
-        System.out.println("1.Calculate % of heads and tails\n" +
+        System.out.println("1.Flip Coin and print percentage of Heads and Tails\n" +
                 "2.Leap year checker\n" +
-                "3.Power of 2\n" +
-                "4.Harmonic Numbers\n" +
+                "3.Power of 2 printer\n" +
+                "4.Harmonic numbers printer\n" +
                 "5.Prime factorization\n" +
-                "6.Compute Quotient and Remainder\n" +
+                "6.Program to Compute Quotient and Remainder\n" +
                 "7.Program to Swap Two Numbers\n" +
                 "8.Program to check number is even or odd\n" +
                 "9.Program to Check Whether an Alphabet is Vowel or Consonant\n" +
